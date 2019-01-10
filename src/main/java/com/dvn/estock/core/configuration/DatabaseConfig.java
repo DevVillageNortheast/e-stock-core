@@ -9,17 +9,13 @@ import com.dvn.estock.core.util.ConstantEnv;
 
 public class DatabaseConfig{
 
-    private static final DatabaseConfig INSTANSE = new DatabaseConfig();
-
     private static String drive;
     private static String url;
     private static String user;
     private static String password;
     private static String dialect;
 
-    private DatabaseConfig(){
-
-    }
+    private DatabaseConfig(){}
 
     static{
 
@@ -68,10 +64,6 @@ public class DatabaseConfig{
     }
     public static String getDialect(){
         return DatabaseConfig.dialect;
-    }
-
-    public static DatabaseConfig getInstanse(){
-        return DatabaseConfig.INSTANSE;
     }
 
 }

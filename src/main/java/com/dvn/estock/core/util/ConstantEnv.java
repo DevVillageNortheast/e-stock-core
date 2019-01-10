@@ -6,13 +6,9 @@ import com.github.shyiko.dotenv.DotEnv;
 
 public class ConstantEnv{
     
-    private static final ConstantEnv INSTANSE = new ConstantEnv();
-    
     private static String DATABASE_CONF_DIR;
 
-    private ConstantEnv(){
-
-    }
+    private ConstantEnv(){}
 
     static {
         Map<String, String> dotEnv = DotEnv.load();
@@ -22,8 +18,5 @@ public class ConstantEnv{
     public static String getDatabaseConfEnv(){
         return ConstantEnv.DATABASE_CONF_DIR;
     }
-
-    public static ConstantEnv getInstanse(){
-        return ConstantEnv.INSTANSE;
-    }
+    
 }
